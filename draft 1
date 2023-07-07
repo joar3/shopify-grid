@@ -1,0 +1,233 @@
+KODE SOM FUNKER
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content-container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .my-grid-container {
+            display: grid;
+            grid-template-columns: fit-content(20%) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-rows: minmax(min-content, max-content);
+            padding: 20px;
+        }
+        .my-grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .image-cell {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-grid-item.vertical {
+            background-color: #f4db0e;
+            color: black;
+            border: none;
+        }
+        .rotate-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .top-row {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .center-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover; 
+            loading: lazy;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="my-grid-container">
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A1</div></div>
+            <div class="my-grid-item top-row center-text bold-text">B1</div>
+            <div class="my-grid-item top-row center-text bold-text">C1</div>
+            <div class="my-grid-item top-row center-text bold-text">D1</div>
+            <div class="my-grid-item top-row center-text bold-text">E1</div>
+            <div class="my-grid-item top-row center-text bold-text">F1</div>
+            <div class="my-grid-item top-row center-text bold-text">G1</div>
+            <div class="my-grid-item top-row center-text bold-text">H1</div>
+            <div class="my-grid-item top-row center-text bold-text">I1</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A2</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="your-image-url-here" alt="Bilde B2"></div>
+            <div class="my-grid-item">C2</div>
+            <div class="my-grid-item">D2</div>
+            <div class="my-grid-item">E2</div>
+            <div class="my-grid-item">F2</div>
+            <div class="my-grid-item">G2</div>
+            <div class="my-grid-item">H2</div>
+            <div class="my-grid-item">I2</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A3</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="your-image-url-here" alt="Bilde B3"></div>
+            <div class="my-grid-item">C3</div>
+            <div class="my-grid-item">D3</div>
+            <div class="my-grid-item">E3</div>
+            <div class="my-grid-item">F3</div>
+            <div class="my-grid-item">G3</div>
+            <div class="my-grid-item">H3</div>
+            <div class="my-grid-item">I3</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A4</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="your-image-url-here" alt="Bilde B4"></div>
+            <div class="my-grid-item">C4</div>
+            <div class="my-grid-item">D4</div>
+            <div class="my-grid-item">E4</div>
+            <div class="my-grid-item">F4</div>
+            <div class="my-grid-item">G4</div>
+            <div class="my-grid-item">H4</div>
+            <div class="my-grid-item">I4</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+https://i.imgur.com/5whoLbQ.png - LEATHER
+
+https://i.imgur.com/cMbXjMQ.png - TACTICAL
+
+https://i.imgur.com/I0hgYaL.png - X2
+
+
+-------------------------------------------------------------------------------------------------------
+KODE SOM TESTES
+STATUS: Koden under er med modifisering fra ny kode til GPT som skal tilpasse griden til mobil.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content-container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .my-grid-container {
+            display: grid;
+            grid-template-columns: fit-content(20%) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-rows: minmax(min-content, max-content);
+            padding: 20px;
+        }
+        .my-grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .image-cell {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-grid-item.vertical {
+            background-color: #f4db0e;
+            color: black;
+            border: none;
+        }
+        .my-grid-item.vertical.hide-on-mobile {
+            display: none;
+        }
+        .rotate-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .top-row {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .center-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover; 
+            loading: lazy;
+        }
+        /* For skjermer under 600px bredde */
+        @media screen and (max-width: 600px) {
+            .my-grid-container {
+                grid-template-columns: 1fr;
+                grid-auto-flow: row;
+            }
+            .my-grid-item.vertical.hide-on-mobile {
+                display: none; /* Gjør A1 og lignende celler usynlig */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="my-grid-container">
+            <div class="my-grid-item vertical hide-on-mobile center-text"><div class="rotate-text bold-text">A1</div></div>
+            <!-- Resten av HTML-koden som vanlig, men ikke legg til hide-on-mobile på de cellene du vil beholde -->
+            <div class="my-grid-item top-row center-text bold-text">B1</div>
+            <div class="my-grid-item top-row center-text bold-text">C1</div>
+            <div class="my-grid-item top-row center-text bold-text">D1</div>
+            <div class="my-grid-item top-row center-text bold-text">E1</div>
+            <div class="my-grid-item top-row center-text bold-text">F1</div>
+            <div class="my-grid-item top-row center-text bold-text">G1</div>
+            <div class="my-grid-item top-row center-text bold-text">H1</div>
+            <div class="my-grid-item top-row center-text bold-text">I1</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A2</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="https://i.imgur.com/5whoLbQ.png" alt="Bilde B2"></div>
+            <div class="my-grid-item">C2</div>
+            <div class="my-grid-item">D2</div>
+            <div class="my-grid-item">E2</div>
+            <div class="my-grid-item">F2</div>
+            <div class="my-grid-item">G2</div>
+            <div class="my-grid-item">H2</div>
+            <div class="my-grid-item">I2</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A3</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="https://i.imgur.com/cMbXjMQ.png" alt="Bilde B3"></div>
+            <div class="my-grid-item">C3</div>
+            <div class="my-grid-item">D3</div>
+            <div class="my-grid-item">E3</div>
+            <div class="my-grid-item">F3</div>
+            <div class="my-grid-item">G3</div>
+            <div class="my-grid-item">H3</div>
+            <div class="my-grid-item">I3</div>
+            <div class="my-grid-item vertical center-text"><div class="rotate-text bold-text">A4</div></div>
+            <div class="my-grid-item image-cell"><img class="grid-image" src="https://i.imgur.com/I0hgYaL.png" alt="Bilde B4"></div>
+            <div class="my-grid-item">C4</div>
+            <div class="my-grid-item">D4</div>
+            <div class="my-grid-item">E4</div>
+            <div class="my-grid-item">F4</div>
+            <div class="my-grid-item">G4</div>
+            <div class="my-grid-item">H4</div>
+            <div class="my-grid-item">I4</div>
+        </div>
+    </div>
+</body>
+</html>
